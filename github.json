@@ -33,6 +33,22 @@
         "url": "https://github.com/klockky/spotiya/releases/tag/v0.10.1"
       }
     },
+    "https://github.com/Horohi/soloist-station-lite": {
+      "stars": 21,
+      "release": {
+        "version": "v1.3.12",
+        "publishedAt": "2026-11-12T17:19:48Z",
+        "url": "https://github.com/Horohi/soloist-station-lite/releases/tag/v1.3.12"
+      }
+    },
+    "https://github.com/awtainq/Alice-apple-music": {
+      "stars": 0,
+      "release": {
+        "version": "v0.3.8",
+        "publishedAt": "2026-11-02T21:30:31Z",
+        "url": "https://github.com/awtainq/Alice-apple-music/releases/tag/v0.3.8"
+      }
+    },
     "https://github.com/rodyatotu/soundya": {
       "stars": 28,
       "release": {
@@ -100,14 +116,6 @@
     "https://github.com/e2ret/noema-alice": {
       "stars": 15,
       "release": null
-    },
-    "https://github.com/SHAREN/yandex-station-ha-fastcommands": {
-      "stars": 0,
-      "release": {
-        "version": "v0.1.1",
-        "publishedAt": "2026-10-28T20:54:24Z",
-        "url": "https://github.com/SHAREN/yandex-station-ha-fastcommands/releases/tag/v0.1.1"
-      }
     },
     "https://github.com/skrashevich/quasar-bridge": {
       "stars": 67,

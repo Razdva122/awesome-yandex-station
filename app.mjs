@@ -5,6 +5,7 @@ const icons = {
   wave: '<path d="M2 12h3l2.5-7 4.5 14 4-14 2.5 7H22"/>',
   panel: '<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 9v11M6 6.5h.01M9 6.5h.01"/>',
   stream: '<path d="M3 8c6-2 12-1.5 18 2M5 12c5-1.5 10-1 15 2M7 16c4-1 7.5-.5 11 1.5"/>',
+  equalizer: '<path d="M4 13v4m4-8v8m4-13v13m4-10v10m4-6v6M4 21h16"/>',
   cloud: '<path d="M10 17h8a3.5 3.5 0 1 0-.5-7 5 5 0 0 0-7.5-2.5V17ZM7 9v8M4 11v6M1.5 13v3"/>',
   play: '<rect x="3" y="5" width="18" height="14" rx="4"/><path d="m10 9 5 3-5 3V9Z"/>',
   moon: '<path d="M20 15a8 8 0 0 1-11-11 8.5 8.5 0 1 0 11 11ZM17 4v5m-2.5-2.5h5"/>',

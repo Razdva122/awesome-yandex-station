@@ -104,6 +104,44 @@
       ]
     },
     {
+      "name": "Soloist", "icon": "equalizer", "accent": "green", "category": "music", "stars": 21,
+      "repo": "https://github.com/Horohi/soloist-station-lite",
+      "description": "Слушайте Spotify через Connect и ищите музыку голосом Алисы.",
+      "requirements": "Станция с root и 64-битным Linux.",
+      "features": [
+        "Поиск треков, исполнителей и альбомов голосом",
+        "Управление воспроизведением и громкостью кнопками Станции",
+        "Подсветка в такт музыке"
+      ],
+      "yamInstall": {
+        "command": "yam install horohi/soloist",
+        "note": "Нужен YAM v2 с подключённым официальным реестром.",
+        "source": "https://repo.yse.wtf/packages/horohi/soloist"
+      },
+      "compatibility": [
+        {"model":"lite1","status":"tested","note":"В релизе v1.3.12 автор описывает проверку голосовых ответов Алисы во время воспроизведения Spotify.","source":"https://github.com/Horohi/soloist-station-lite/releases/tag/v1.3.12"}
+      ]
+    },
+    {
+      "name": "Alice × Apple Music", "icon": "music", "accent": "rose", "category": "music", "stars": 0,
+      "repo": "https://github.com/awtainq/Alice-apple-music",
+      "description": "Просите Алису найти и включить музыку из Apple Music прямо на Станции.",
+      "requirements": "Подписка Apple Music, Станция с root, Entware с FFmpeg и Luna с поддержкой бинарных плагинов.",
+      "features": [
+        "Голосовой поиск по каталогу и личной медиатеке Apple Music",
+        "Управление очередью и воспроизведением голосом",
+        "Похожие треки после окончания очереди"
+      ],
+      "yamInstall": {
+        "command": "yam install awtainq/apple-music\nawtainq-apple-music",
+        "note": "Вторая команда импортирует пакет в Luna. Затем добавьте личный профиль и включите сервис по инструкции.",
+        "source": "https://github.com/awtainq/Alice-apple-music#пакет-yam"
+      },
+      "compatibility": [
+        {"model":"midi","status":"tested","note":"Автор проверил работу на Станции Миди с профилем Luna yandexmidi.","source":"https://github.com/awtainq/Alice-apple-music#установка-через-luna"}
+      ]
+    },
+    {
       "name": "soundya", "icon": "cloud", "accent": "peach", "category": "music", "stars": 28,
       "repo": "https://github.com/rodyatotu/soundya",
       "description": "Включайте треки из SoundCloud голосом.",
@@ -286,19 +324,6 @@
       ],
       "compatibility": [
         {"model":"mini1","variant":"YNDX-0004","status":"tested"}
-      ]
-    },
-    {
-      "name": "HA Fast Commands", "icon": "bolt", "accent": "peach", "category": "voice", "stars": 0,
-      "repo": "https://github.com/SHAREN/yandex-station-ha-fastcommands",
-      "description": "Говорите «включи свет» без слова «Алиса».",
-      "requirements": "Home Assistant. Доступные фразы зависят от прошивки Станции.",
-      "features": [
-        "Короткие команды распознаются на самой Станции",
-        "Команда передаётся в Home Assistant по локальной сети"
-      ],
-      "compatibility": [
-        {"model":"lite1","status":"tested","firmware":"0.369.1.46.4778262442.20261013.297","note":"Проект экспериментальный. Автор проверил эту модель и прошивку."}
       ]
     },
     {
