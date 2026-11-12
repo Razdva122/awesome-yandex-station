@@ -67,9 +67,12 @@ h1 { font-size: clamp(36px, 4.7vw, 66px); line-height: .99; font-weight: 770; le
 .primary-button:active { transform: translateY(1px); }
 
 .catalog { margin-top: 44px; scroll-margin-top: 24px; }
-.catalog-heading { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 8px 20px; }
+.catalog-heading { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px 20px; }
 .catalog-heading h2 { font-size: clamp(26px, 3vw, 37px); line-height: 1.15; letter-spacing: -.048em; }
 .catalog-heading p, .result-bar { font-size: 13px; }
+.catalog-heading p { margin-top: 4px; }
+.suggest-project { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 12px; border: 1px solid var(--border); border-radius: 8px; color: var(--violet); font-size: 14px; font-weight: 650; }
+.suggest-project:hover { background: var(--hover); border-color: var(--violet); }
 .filters { display: grid; gap: 16px; margin-top: 20px; }
 .filter { min-width: 0; display: grid; gap: 8px; font-size: 13px; font-weight: 620; color: var(--muted); }
 .control { display: block; position: relative; }
