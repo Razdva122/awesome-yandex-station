@@ -254,7 +254,7 @@ function initialize(data) {
 }
 
 try {
-  const response = await fetch('./catalog.json', { cache: 'no-cache' });
+  const response = await fetch('./catalog.json?v=yam-install', { cache: 'no-cache' });
   if (!response.ok) throw new Error(`HTTP ${response.status}`);
   initialize(await response.json());
 } catch (error) {
