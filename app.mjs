@@ -71,6 +71,18 @@ function categoryLabel(category, label) {
   return element('span', 'category-label', [icon(categoryIcons[category]), document.createTextNode(label)]);
 }
 
+function projectLabels(project, categories) {
+  const labels = element('div', 'project-labels', [
+    categoryLabel(project.category, categories[project.category])
+  ]);
+  if (project.yamInstall) {
+    const badge = element('span', 'yam-badge', 'YAM');
+    badge.title = 'Установка через YAM';
+    labels.append(badge);
+  }
+  return labels;
+}
+
 function link(href, label, className, withIcon = false) {
   const node = element('a', className, label);
   node.href = href;
@@ -138,7 +150,7 @@ function showDetails(project, data) {
   title.id = 'project-title';
   const head = element('div', 'detail-top', [
     projectIcon(project),
-    element('div', '', [title, categoryLabel(project.category, categories[project.category])])
+    element('div', '', [title, projectLabels(project, categories)])
   ]);
   const intro = element('p', 'detail-intro', project.description);
   const github = link(project.repo, 'Открыть на GitHub', 'repo-link', true);
@@ -218,7 +230,7 @@ function projectCard(project, data) {
       projectIcon(project),
       element('div', '', [
         element('h3', '', project.name),
-        categoryLabel(project.category, data.categories[project.category])
+        projectLabels(project, data.categories)
       ]),
       starLink(project)
     ]),

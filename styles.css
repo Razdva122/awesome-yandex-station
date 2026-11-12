@@ -116,7 +116,8 @@ h1 { font-size: clamp(36px, 4.7vw, 66px); line-height: .99; font-weight: 770; le
 .green { --icon-fg: var(--green); --icon-bg: var(--green-bg); }
 .rose { --icon-fg: var(--rose); --icon-bg: var(--rose-bg); }
 .project h3 { font-size: 19px; line-height: 1.2; letter-spacing: -.035em; }
-.project-top .category-label, .detail-top .category-label { margin-top: 4px; }
+.project-labels { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; margin-top: 4px; }
+.yam-badge { display: inline-block; padding: 0 4px; border-radius: 4px; background: var(--lilac-bg); color: var(--lilac); font-size: 11px; font-weight: 650; }
 .star { display: inline-flex; position: relative; z-index: 2; flex: none; align-items: center; justify-content: center; gap: 4px; min-width: 44px; min-height: 44px; margin-left: auto; padding-inline: 8px; border-radius: 8px; font-size: 13px; color: var(--violet); white-space: nowrap; }
 .star:hover { background: var(--hover); color: var(--violet-hover); }
 .star svg, .repo-link svg { width: 15px; height: 15px; }
