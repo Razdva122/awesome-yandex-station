@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Каталог программ для Яндекс Станций с root-доступом. Поиск по программам, категории, сведения о совместимости и ссылки на GitHub.">
+  <meta name="theme-color" content="#101015">
+  <title>awesome-yandex-station | каталог программ</title>
+  <link rel="icon" href="assets/station-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.mjs"></script>
+</head>
+<body>
+  <a class="skip-link" href="#catalog">К каталогу</a>
+  <header class="site-header">
+    <div class="frame header-inner">
+      <a class="wordmark" href="./" aria-label="awesome-yandex-station, главная">
+        <img src="assets/station-mark.svg" alt="" width="29" height="29">
+        <span>awesome-yandex-station</span>
+      </a>
+      <a class="header-link" href="https://hackalice.me/">Вики HackAlice <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main class="frame">
+    <section class="hero" aria-labelledby="title">
+      <img class="hero-image" src="assets/station.jpg" alt="" width="1250" height="833" fetchpriority="high">
+      <div class="hero-content">
+        <h1 id="title">Программы для<br>Яндекс Станций</h1>
+        <p>Каталог для колонок с root-доступом. Найдите программу для своей модели и сверьте прошивку.</p>
+        <a class="primary-button" href="#catalog">Открыть каталог <span aria-hidden="true">↓</span></a>
+      </div>
+    </section>
+
+    <section class="catalog" id="catalog" aria-labelledby="catalog-title">
+      <div class="catalog-heading">
+        <h2 id="catalog-title">Каталог программ</h2>
+        <p class="muted" id="catalog-date"></p>
+      </div>
+
+      <form class="filters" id="filters" role="search" hidden>
+        <label class="filter">
+          <span>Поиск</span>
+          <span class="control">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6"/><path d="m15 15 4.5 4.5" stroke-linecap="round"/></svg>
+            <input type="search" name="query" placeholder="Название, функция или прошивка" autocomplete="off">
+          </span>
+        </label>
+        <fieldset class="category-filter">
+          <legend>Назначение</legend>
+          <div class="category-options" id="category-options"></div>
+        </fieldset>
+      </form>
+
+      <div class="result-bar" id="result-bar" hidden>
+        <p id="result-count" role="status" aria-live="polite"></p>
+        <button type="button" class="text-button" id="reset" hidden>Сбросить фильтры</button>
+        <span class="muted sort-note" id="sort-note">По звёздам GitHub</span>
+      </div>
+      <p class="loading" id="loading" role="status">Загружаем каталог…</p>
+      <noscript><p>Для поиска и карточек нужен JavaScript. Список программ доступен в <a href="catalog.json">данных каталога</a>.</p></noscript>
+      <div class="project-grid" id="projects"></div>
+    </section>
+  </main>
+
+  <footer class="frame site-footer">
+    <a class="wordmark footer-wordmark" href="./">
+      <img src="assets/station-mark.svg" alt="" width="25" height="25">
+      <span>awesome-yandex-station</span>
+    </a>
+    <p>Независимый каталог. Совместимость указана по документации и отчётам участников проектов.</p>
+  </footer>
+
+  <dialog id="details" aria-labelledby="project-title">
+    <div class="dialog-inner">
+      <form method="dialog" class="dialog-close">
+        <button class="icon-button" aria-label="Закрыть" autofocus>×</button>
+      </form>
+      <div id="details-content"></div>
+    </div>
+  </dialog>
+</body>
+</html>

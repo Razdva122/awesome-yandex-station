@@ -1,0 +1,34 @@
+name: Предложить проект
+description: Добавить программу для Яндекс Станций в каталог
+title: "Проект: "
+body:
+  - type: input
+    id: project
+    attributes:
+      label: Название программы
+    validations:
+      required: true
+  - type: input
+    id: repository
+    attributes:
+      label: Репозиторий
+      placeholder: https://github.com/автор/проект
+    validations:
+      required: true
+  - type: textarea
+    id: purpose
+    attributes:
+      label: Что программа добавляет Станции?
+      description: Опишите в одном или двух предложениях, что сможет делать пользователь.
+    validations:
+      required: true
+  - type: textarea
+    id: compatibility
+    attributes:
+      label: Модели и прошивки
+      description: Укажите, где программу проверяли, и добавьте ссылку на подтверждение. Если точная прошивка неизвестна, так и напишите.
+  - type: textarea
+    id: setup
+    attributes:
+      label: Требования и скриншоты
+      description: Если есть, приложите ссылки на инструкцию и изображение интерфейса. Укажите, какие сервисы или оборудование нужны.

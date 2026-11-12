@@ -1,0 +1,285 @@
+{
+  "checkedAt": "2026-11-12",
+  "models": {
+    "station1": "Станция 1",
+    "station2": "Станция 2",
+    "station3": "Станция 3",
+    "lite1": "Лайт 1",
+    "lite2": "Лайт 2",
+    "mini1": "Мини 1",
+    "mini2": "Мини 2",
+    "mini3": "Мини 3",
+    "mini3pro": "Мини 3 Про",
+    "midi": "Миди",
+    "max": "Макс",
+    "street": "Стрит"
+  },
+  "categories": {
+    "packages": "Пакеты и плагины",
+    "voice": "Голос и умный дом",
+    "control": "Управление",
+    "music": "Музыка"
+  },
+  "projects": [
+    {
+      "name": "YAM", "icon": "box", "accent": "lilac", "category": "packages", "stars": 175,
+      "repo": "https://github.com/nyakokitsu/yam",
+      "description": "Устанавливайте программы прямо на Станцию.",
+      "requirements": "Сборка под платформу колонки.",
+      "features": [
+        "Поиск программ в реестрах",
+        "Установка и обновление пакетов .yampkg",
+        "Подбор сборки под модель колонки"
+      ],
+      "compatibility": [
+        {"model":"station1","status":"declared"},{"model":"station2","status":"declared"},{"model":"station3","status":"declared"},
+        {"model":"lite1","status":"declared"},{"model":"lite2","status":"declared"},
+        {"model":"mini1","status":"declared"},{"model":"mini2","status":"declared"},{"model":"mini3","status":"declared"},{"model":"mini3pro","status":"declared"},
+        {"model":"midi","status":"declared"},{"model":"max","status":"declared"},{"model":"street","status":"declared"}
+      ]
+    },
+    {
+      "name": "Pulsar", "icon": "wave", "accent": "cyan", "category": "voice", "stars": 107,
+      "repo": "https://github.com/Morvex885/pulsar",
+      "description": "Управляйте умным домом голосом через Home Assistant.",
+      "requirements": "Home Assistant для голосовых команд, Music Assistant для воспроизведения музыки.",
+      "features": [
+        "Голосовые команды через ESPHome Native API",
+        "Музыка из Music Assistant через Sendspin",
+        "Работа без облака Яндекса"
+      ],
+      "compatibility": [
+        {"model":"midi","status":"tested","firmware":"0.351.1.6.4197281754.20260528.142","note":"Проверил автор."},
+        {"model":"lite2","variant":"Plum","status":"tested","firmware":"0.369.1.46.4778258659.20261013.133","note":"Проверил автор."},
+        {"model":"lite2","variant":"Prune","status":"tested","firmware":"0.369.1.50.4794654278.20261021.133","note":"Отчёт участника проекта."},
+        {"model":"mini1","variant":"axg_s420_v03","status":"tested","firmware":"1.369.4.24.4711907614.20260928","note":"Отчёт участника проекта."},
+        {"model":"mini2","status":"tested","firmware":"0.369.1.46.4778262943.20261013.299","note":"Отчёт участника проекта."},
+        {"model":"mini3","status":"tested","firmware":"0.369.1.50.4794652521.20261021.117","note":"Отчёт участника проекта."},
+        {"model":"mini3pro","status":"tested","note":"Отчёт участника проекта."},
+        {"model":"station2","status":"tested","firmware":"0.369.1.46.4793639783.20261020.295","note":"Отчёт участника проекта."}
+      ]
+    },
+    {
+      "name": "yapanel-web", "icon": "panel", "accent": "peach", "category": "control", "stars": 91,
+      "repo": "https://github.com/dimap/yapanel-web",
+      "description": "Управляйте Станцией из браузера.",
+      "requirements": "Root-доступ по ADB. Набор функций зависит от профиля устройства.",
+      "features": [
+        "Плеер и Bluetooth",
+        "Цвет подсветки и системные звуки",
+        "Будильники и сценарии на поддерживаемых моделях"
+      ],
+      "screenshot": {
+        "file": "assets/screenshots/yapanel-web.jpg",
+        "alt": "Обзор Станции в тёмной теме yapanel-web",
+        "source": "https://github.com/dimap/yapanel-web/blob/main/docs/screenshots/overview-dark.png",
+        "width": 1500,
+        "height": 761
+      },
+      "compatibility": [
+        {"model":"lite2","variant":"Plum","status":"tested","note":"Основной профиль. Есть проверка на колонке."},
+        {"model":"lite2","variant":"Prune / без часов","status":"tested","note":"Проверены чтение и кольцо подсветки."},
+        {"model":"lite1","status":"tested","note":"Проверены кольцо, будильник, автозапуск и замена звуков.","source":"https://github.com/dimap/yapanel-web/pull/6"},
+        {"model":"mini2","variant":"с часами","status":"tested","firmware":"0.369","note":"Проверены дисплей, RGB и откат."},
+        {"model":"mini2","variant":"без часов","status":"tested","note":"Проверены чтение и кольцо подсветки."},
+        {"model":"mini3","status":"declared","note":"Для этой модели есть отдельный профиль."},
+        {"model":"mini3pro","status":"declared","note":"Для этой модели есть отдельный профиль."},
+        {"model":"station2","status":"declared","note":"Для этой модели есть отдельный профиль."},
+        {"model":"midi","status":"experimental","firmware":"factory-9","note":"Часть функций проверена. Постоянные режимы часов ещё на проверке."}
+      ]
+    },
+    {
+      "name": "Spotiya", "icon": "stream", "accent": "green", "category": "music", "stars": 59,
+      "repo": "https://github.com/klockky/spotiya",
+      "description": "Выбирайте Станцию в Spotify и включайте музыку с телефона.",
+      "requirements": "Spotify Premium.",
+      "features": [
+        "Spotify Connect",
+        "Голосовой поиск через Soloist на совместимой модели",
+        "Управление плеером из терминала"
+      ],
+      "compatibility": [
+        {"model":"mini1","status":"declared","note":"Для Мини 1 есть сборка. Голосовой модуль Soloist на ней ещё не проверен."},
+        {"model":"mini2","status":"tested","note":"Проверены быстрый способ установки и голосовой модуль Soloist."}
+      ]
+    },
+    {
+      "name": "soundya", "icon": "cloud", "accent": "peach", "category": "music", "stars": 28,
+      "repo": "https://github.com/rodyatotu/soundya",
+      "description": "Включайте треки из SoundCloud голосом.",
+      "features": [
+        "Избранное и плейлисты в браузере",
+        "AirPlay",
+        "Плеер в строке меню macOS"
+      ],
+      "screenshot": {
+        "file": "assets/screenshots/soundya.jpg",
+        "alt": "Четыре экрана мобильной веб-панели soundya",
+        "source": "https://github.com/rodyatotu/soundya/blob/HEAD/docs/showcase.jpg",
+        "width": 1600,
+        "height": 900
+      },
+      "compatibility": [
+        {"model":"lite1","status":"declared","note":"README указывает 0.369.1.46 для проверки получения доступа. Версия прошивки для проверки самого плеера не указана."},
+        {"model":"mini1","status":"declared"},{"model":"mini2","status":"declared"},{"model":"station2","status":"declared"}
+      ]
+    },
+    {
+      "name": "ytm-alice", "icon": "play", "accent": "rose", "category": "music", "stars": 26,
+      "repo": "https://github.com/SPAWNRYS-ban/ytm-alice",
+      "description": "Слушайте YouTube Music на Станции.",
+      "features": [
+        "Поиск треков голосом",
+        "Трансляция из YouTube Music по локальной сети",
+        "Управление из браузера или терминала"
+      ],
+      "compatibility": [
+        {"model":"lite1","status":"tested","note":"На реальной колонке проверена базовая работа предыдущих версий."},
+        {"model":"mini2","variant":"с часами","status":"tested","note":"На реальной колонке проверена базовая работа предыдущих версий."},
+        {"model":"mini2","variant":"без часов","status":"declared","note":"README указывает пакет для обеих версий Мини 2."}
+      ]
+    },
+    {
+      "name": "Luna", "icon": "moon", "accent": "lilac", "category": "packages", "stars": 22,
+      "repo": "https://github.com/nyakokitsu/luna",
+      "description": "Запускайте Lua-плагины на Станции.",
+      "requirements": "Распространяется отдельно от YAM v2.",
+      "features": [
+        "Поддержка совместимых пакетов .yap",
+        "Веб-панель для управления плагинами",
+        "Доступ плагинов к функциям колонки"
+      ],
+      "compatibility": [
+        {"model":"mini2","status":"tested","firmware":"0.369.1.46.4793643989.20261020.299","note":"На этой прошивке проверено управление громкостью на устройстве."}
+      ]
+    },
+    {
+      "name": "ChatGPT Voice", "icon": "mic", "accent": "green", "category": "voice", "stars": 17,
+      "repo": "https://github.com/hu553in/yandex-station-chatgpt-voice",
+      "description": "Разговаривайте с ChatGPT через Станцию.",
+      "requirements": "Аккаунт ChatGPT.",
+      "compatibility": [
+        {"model":"mini2","status":"tested","note":"Автор проверял проект только на Мини 2."}
+      ]
+    },
+    {
+      "name": "Alice Control Center", "icon": "sliders", "accent": "cyan", "category": "control", "stars": 13,
+      "repo": "https://github.com/chrometechhype/alice-control-center",
+      "description": "Настраивайте подсветку и звуки Станции из браузера.",
+      "requirements": "SSH-доступ к колонке, компьютер с Node.js.",
+      "features": [
+        "Управление Bluetooth",
+        "Замена системных звуков",
+        "Резервные копии"
+      ],
+      "compatibility": [
+        {"model":"lite2","variant":"Prune EVT2","status":"tested","firmware":"0.372.1.13","note":"Проверен полный набор функций."},
+        {"model":"lite1","status":"declared"},{"model":"mini1","status":"declared"},
+        {"model":"mini3","status":"declared"},{"model":"mini3pro","status":"declared"}
+      ]
+    },
+    {
+      "name": "Station AirPlay", "icon": "airplay", "accent": "lilac", "category": "music", "stars": 6,
+      "repo": "https://github.com/ryysel/Station-airplay",
+      "description": "Передавайте звук с iPhone, iPad или Mac на Станцию.",
+      "requirements": "Luna. Поддержка кнопок и дисплея зависит от модели.",
+      "features": [
+        "AirPlay 2",
+        "Воспроизведение на нескольких колонках",
+        "Громкость с телефона на совместимых моделях"
+      ],
+      "screenshot": {
+        "file": "assets/screenshots/station-airplay.jpg",
+        "alt": "Список доступных Станций в меню AirPlay на iPhone",
+        "source": "https://github.com/ryysel/Station-airplay/blob/HEAD/docs/assets/airplay-picker.jpg",
+        "width": 590,
+        "height": 1280
+      },
+      "compatibility": [
+        {"model":"station1","status":"declared"},{"model":"station2","status":"declared"},
+        {"model":"lite1","status":"declared"},{"model":"lite2","status":"declared"},
+        {"model":"mini1","status":"declared"},{"model":"mini2","status":"declared"},
+        {"model":"mini3","status":"declared"},{"model":"midi","status":"declared"}
+      ]
+    },
+    {
+      "name": "NabuStation", "icon": "tv", "accent": "lilac", "category": "voice", "stars": 3,
+      "repo": "https://github.com/qwikly3/NabuStation",
+      "description": "Добавьте Станции голосовое управление умным домом и режим Android TV.",
+      "requirements": "Для голосового режима нужны Debian на Станции и Home Assistant. ТВ-режим работает в Android 6.",
+      "features": [
+        "Голосовые команды через Home Assistant Assist",
+        "Музыка из Music Assistant через Snapcast",
+        "ТВ-лаунчер, SmartTube и пульт на телефоне"
+      ],
+      "compatibility": [
+        {"model":"station1","status":"tested","note":"Автор проверил связку с Debian и Home Assistant 2026.7."}
+      ]
+    },
+    {
+      "name": "midipult", "icon": "dial", "accent": "cyan", "category": "control", "stars": 8,
+      "repo": "https://github.com/RoBiN19666/midipult",
+      "description": "Настраивайте экран и подсветку Станции и включайте радио из браузера.",
+      "features": [
+        "Управление дисплеем и LED-кольцом",
+        "Интернет-радио и локальная аудиотека",
+        "Сценарии по расписанию"
+      ],
+      "screenshot": {
+        "file": "assets/screenshots/midipult.jpg",
+        "alt": "Настройки дисплея Яндекс Станции Миди в панели midipult",
+        "source": "https://github.com/RoBiN19666/midipult/blob/main/docs/img/display.png",
+        "width": 1500,
+        "height": 1289
+      },
+      "compatibility": [
+        {"model":"midi","status":"tested","note":"Автор сообщает о проверке на физической Станции Миди."}
+      ]
+    },
+    {
+      "name": "Плеер «Звук»", "icon": "headphones", "accent": "rose", "category": "music", "stars": 8,
+      "repo": "https://github.com/derangedabbot/zvuk-yandex-station-player",
+      "description": "Слушайте музыку из «Звука» на Станции.",
+      "features": [
+        "Поиск треков, альбомов и плейлистов",
+        "Очередь и управление плеером из браузера"
+      ],
+      "screenshot": {
+        "file": "assets/screenshots/zvuk.jpg",
+        "alt": "Поиск, текущий трек и очередь воспроизведения в веб-плеере «Звук»",
+        "source": "https://github.com/derangedabbot/zvuk-yandex-station-player/blob/main/docs/panel.png",
+        "width": 1500,
+        "height": 840
+      },
+      "compatibility": [
+        {"model":"station2","status":"tested","firmware":"0.369.1.50"}
+      ]
+    },
+    {
+      "name": "NOEMA Alice", "icon": "home", "accent": "green", "category": "voice", "stars": 15,
+      "repo": "https://github.com/e2ret/noema-alice",
+      "description": "Управляйте Home Assistant голосом с локальной обработкой речи.",
+      "requirements": "Home Assistant и компьютер для локального моста.",
+      "features": [
+        "Активация словом «Алиса»",
+        "Распознавание речи через Vosk и ответы через Home Assistant Assist"
+      ],
+      "compatibility": [
+        {"model":"mini1","variant":"YNDX-0004","status":"tested"}
+      ]
+    },
+    {
+      "name": "HA Fast Commands", "icon": "bolt", "accent": "peach", "category": "voice", "stars": 0,
+      "repo": "https://github.com/SHAREN/yandex-station-ha-fastcommands",
+      "description": "Говорите «включи свет» без слова «Алиса».",
+      "requirements": "Home Assistant. Доступные фразы зависят от прошивки Станции.",
+      "features": [
+        "Короткие команды распознаются на самой Станции",
+        "Команда передаётся в Home Assistant по локальной сети"
+      ],
+      "compatibility": [
+        {"model":"lite1","status":"tested","firmware":"0.369.1.46.4778262442.20261013.297","note":"Проект экспериментальный. Автор проверил эту модель и прошивку."}
+      ]
+    }
+  ]
+}
