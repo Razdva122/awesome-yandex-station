@@ -80,6 +80,16 @@ function link(href, label, className, withIcon = false) {
   return node;
 }
 
+function starLink(project, showLabel = false) {
+  const contents = [icon('star')];
+  if (showLabel) contents.push(document.createTextNode('Поставить звезду'));
+  contents.push(element('span', 'star-count', String(project.stars)));
+  const star = link(project.repo, contents, 'star');
+  star.setAttribute('aria-label', `Поставить звезду программе ${project.name} на GitHub. Сейчас звёзд: ${project.stars}`);
+  star.title = 'Открыть репозиторий и поставить звезду';
+  return star;
+}
+
 function yamInstallSection({ command, note, source }) {
   const code = element('code', '', command);
   const copy = element('button', 'yam-copy', 'Копировать');
@@ -148,7 +158,7 @@ function showDetails(project, data) {
   }
   if (project.yamInstall) detailContent.append(yamInstallSection(project.yamInstall));
   detailContent.append(
-    element('div', 'detail-actions', [github]),
+    element('div', 'detail-actions', [github, starLink(project, true)]),
     element('details', 'compatibility-disclosure', [
       element('summary', '', 'Модели и прошивки'),
       element('ul', 'compatibility-list', rows)
@@ -175,8 +185,6 @@ function showDetails(project, data) {
 }
 
 function projectCard(project, data) {
-  const star = element('span', 'star', [icon('star'), document.createTextNode(project.stars)]);
-  star.setAttribute('aria-label', `Звёзд на GitHub: ${project.stars}`);
   const github = link(project.repo, 'GitHub', 'repo-link', true);
   github.setAttribute('aria-label', `${project.name} на GitHub`);
   const details = element('button', 'detail-button', [document.createTextNode('Подробнее'), icon('chevron')]);
@@ -191,7 +199,7 @@ function projectCard(project, data) {
         element('h3', '', project.name),
         categoryLabel(project.category, data.categories[project.category])
       ]),
-      star
+      starLink(project)
     ]),
     element('p', 'project-description', project.description),
     element('div', 'project-actions', [details, github])

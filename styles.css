@@ -93,6 +93,10 @@ h1 { font-size: clamp(36px, 4.7vw, 66px); line-height: .99; font-weight: 770; le
 .category-option:hover .category-label { border-color: var(--subtle); }
 .category-radio:checked + .category-label { border-color: var(--violet); color: var(--lilac); background: var(--lilac-bg); }
 .category-radio:focus-visible + .category-label { outline: 2px solid var(--violet); outline-offset: 3px; }
+.star-notice { display: flex; align-items: flex-start; gap: 12px; margin-top: 16px; padding: 12px 16px; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); color: var(--muted); font-size: 14px; }
+.star-notice-icon { flex: none; color: var(--violet); font-size: 24px; line-height: 1; }
+.star-notice p + p { margin-top: 4px; }
+.star-notice strong { color: var(--text); }
 .result-bar { display: flex; align-items: center; gap: 16px; min-height: 52px; color: var(--muted); }
 .result-bar p { color: var(--text); font-weight: 660; }
 .sort-note { margin-left: auto; }
@@ -113,7 +117,8 @@ h1 { font-size: clamp(36px, 4.7vw, 66px); line-height: .99; font-weight: 770; le
 .rose { --icon-fg: var(--rose); --icon-bg: var(--rose-bg); }
 .project h3 { font-size: 19px; line-height: 1.2; letter-spacing: -.035em; }
 .project-top .category-label, .detail-top .category-label { margin-top: 4px; }
-.star { display: inline-flex; align-items: center; gap: 4px; align-self: start; margin-left: auto; font-size: 13px; color: var(--muted); white-space: nowrap; }
+.star { display: inline-flex; position: relative; z-index: 2; flex: none; align-items: center; justify-content: center; gap: 4px; min-width: 44px; min-height: 44px; margin-left: auto; padding-inline: 8px; border-radius: 8px; font-size: 13px; color: var(--violet); white-space: nowrap; }
+.star:hover { background: var(--hover); color: var(--violet-hover); }
 .star svg, .repo-link svg { width: 15px; height: 15px; }
 .project-description { margin-block: 16px; font-size: 16px; font-weight: 550; line-height: 1.4; }
 .project-actions { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding-top: 12px; margin-top: auto; border-top: 1px solid var(--border); }
@@ -145,6 +150,9 @@ dialog::backdrop { background: var(--overlay); }
 .detail-actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 12px; }
 .detail-actions .repo-link { min-height: 44px; padding: 8px 12px; border: 1px solid var(--border); border-radius: 8px; color: var(--violet); }
 .detail-actions .repo-link:hover { background: var(--hover); }
+.detail-actions .star { gap: 8px; margin-left: 0; padding-inline: 12px; border: 1px solid var(--border); background: var(--lilac-bg); font-weight: 650; }
+.detail-actions .star:hover { border-color: var(--violet); }
+.detail-actions .star-count { padding-left: 8px; border-left: 1px solid var(--border); font-weight: 500; }
 .detail-section-title { margin-top: 20px; font-size: 16px; }
 .yam-install .compatibility-note { margin-top: 4px; }
 .yam-command { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-top: 8px; padding: 8px; border: 1px solid var(--border); border-radius: 8px; background: var(--background); }
