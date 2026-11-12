@@ -154,6 +154,11 @@ dialog::backdrop { background: var(--overlay); }
 .detail-actions .star:hover { border-color: var(--violet); }
 .detail-actions .star-count { padding-left: 8px; border-left: 1px solid var(--border); font-weight: 500; }
 .detail-section-title { margin-top: 20px; font-size: 16px; }
+.release-info { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; margin-top: 8px; color: var(--muted); font-size: 13px; overflow-wrap: anywhere; }
+.project .release-info { margin-top: 0; margin-bottom: 12px; }
+.release-info strong, .release-link { color: var(--violet); font-weight: 650; }
+.release-link:hover { text-decoration: underline; }
+.release-link svg { width: 13px; height: 13px; margin-left: 4px; vertical-align: middle; }
 .yam-install .compatibility-note { margin-top: 4px; }
 .yam-command { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-top: 8px; padding: 8px; border: 1px solid var(--border); border-radius: 8px; background: var(--background); }
 .yam-command pre { flex: 1 1 250px; min-width: 0; margin: 0; padding: 4px; font: 13px/1.5 var(--mono); white-space: pre-wrap; overflow-wrap: anywhere; }

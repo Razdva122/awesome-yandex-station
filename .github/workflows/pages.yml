@@ -5,16 +5,55 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
+  schedule:
+    - cron: '23 4 * * *'
   workflow_dispatch:
 
 permissions:
   contents: read
 
 jobs:
-  check:
+  refresh:
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      commit: ${{ steps.snapshot.outputs.commit }}
     steps:
       - uses: actions/checkout@v6
+        with:
+          ref: main
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      - name: Обновить звёзды и релизы
+        run: node scripts/refresh-github.mjs
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: Сохранить снимок GitHub
+        id: snapshot
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add github.json
+          git commit -m 'Refresh GitHub stars and releases'
+          git push origin HEAD:main
+          echo "commit=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+  check:
+    needs: refresh
+    if: "!cancelled() && (needs.refresh.result == 'success' || needs.refresh.result == 'skipped')"
+    runs-on: ubuntu-latest
+    outputs:
+      commit: ${{ steps.revision.outputs.commit }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ needs.refresh.outputs.commit || github.sha }}
+      - name: Определить версию сайта
+        id: revision
+        run: echo "commit=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
       - uses: actions/setup-node@v6
         with:
           node-version: '24'
@@ -23,8 +62,10 @@ jobs:
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         run: |
           mkdir _site
-          cp index.html styles.css app.mjs catalog.mjs catalog.json _site/
+          cp index.html styles.css app.mjs catalog.mjs catalog.json github.json _site/
           cp -R assets _site/
+          commit=$(git rev-parse HEAD)
+          sed -i -e "s/styles\.css\"/styles.css?v=$commit\"/" -e "s/app\.mjs\"/app.mjs?v=$commit\"/" _site/index.html
       - uses: actions/upload-pages-artifact@v4
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         with:
@@ -35,6 +76,7 @@ jobs:
     needs: check
     runs-on: ubuntu-latest
     permissions:
+      contents: read
       pages: write
       id-token: write
     concurrency:
@@ -44,6 +86,17 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - name: Проверить актуальность снимка
+        id: current
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ARTIFACT_COMMIT: ${{ needs.check.outputs.commit }}
+        run: |
+          current=$(gh api "repos/$GITHUB_REPOSITORY/branches/main" --jq .commit.sha)
+          if [ "$current" = "$ARTIFACT_COMMIT" ]; then
+            echo 'deploy=true' >> "$GITHUB_OUTPUT"
+          fi
       - name: Опубликовать каталог
         id: deployment
+        if: steps.current.outputs.deploy == 'true'
         uses: actions/deploy-pages@v4

@@ -90,6 +90,19 @@ function starLink(project, showLabel = false) {
   return star;
 }
 
+const releaseDate = new Intl.DateTimeFormat('ru', {
+  day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC'
+});
+
+function releaseInfo(release, detailed = false) {
+  const date = element('time', '', releaseDate.format(new Date(release.publishedAt)));
+  date.dateTime = release.publishedAt;
+  const version = detailed
+    ? link(release.url, release.version, 'release-link', true)
+    : element('strong', '', release.version);
+  return element('p', 'release-info', [version, date]);
+}
+
 function yamInstallSection({ command, note, source }) {
   const code = element('code', '', command);
   const copy = element('button', 'yam-copy', 'Копировать');
@@ -145,6 +158,14 @@ function showDetails(project, data) {
     return row;
   });
   detailContent.replaceChildren(head, intro);
+  if (project.release) {
+    detailContent.append(element('section', '', [
+      element('h3', 'detail-section-title', 'Последний релиз'),
+      releaseInfo(project.release, true)
+    ]));
+  } else if (project.release === null) {
+    detailContent.append(element('p', 'release-info', 'Стабильных релизов в GitHub Releases пока нет.'));
+  }
   if (project.features?.length) {
     detailContent.append(
       element('ul', 'feature-list', project.features.map(feature =>
@@ -202,12 +223,13 @@ function projectCard(project, data) {
       starLink(project)
     ]),
     element('p', 'project-description', project.description),
+    ...(project.release ? [releaseInfo(project.release)] : []),
     element('div', 'project-actions', [details, github])
   ]);
 }
 
 function initialize(data) {
-  const { projects, models, categories, checkedAt } = data;
+  const { projects, models, categories, checkedAt, githubCheckedAt } = data;
   const controls = filters.elements;
   const plural = new Intl.PluralRules('ru');
   const pluralNames = { one: 'программа', few: 'программы', many: 'программ', other: 'программ' };
@@ -223,8 +245,8 @@ function initialize(data) {
   }
   const date = new Intl.DateTimeFormat('ru', {
     day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC'
-  }).format(new Date(checkedAt));
-  document.querySelector('#catalog-date').textContent = `Данные на ${date}`;
+  }).format(new Date(githubCheckedAt || checkedAt));
+  document.querySelector('#catalog-date').textContent = githubCheckedAt ? `GitHub обновлён ${date}` : `Данные на ${date}`;
 
   function clear() {
     filters.reset();
@@ -262,10 +284,27 @@ function initialize(data) {
   render();
 }
 
-try {
-  const response = await fetch('./catalog.json?v=yandex-quasar', { cache: 'no-cache' });
+async function loadJson(file) {
+  const url = new URL(file, import.meta.url);
+  url.search = new URL(import.meta.url).search;
+  const response = await fetch(url, { cache: 'no-cache' });
   if (!response.ok) throw new Error(`HTTP ${response.status}`);
-  initialize(await response.json());
+  return response.json();
+}
+
+try {
+  const [catalog, github] = await Promise.all([
+    loadJson('catalog.json'),
+    loadJson('github.json').catch(() => null)
+  ]);
+  if (github) {
+    catalog.projects = catalog.projects.map(project => ({
+      ...project,
+      ...github.repositories[project.repo]
+    }));
+    catalog.githubCheckedAt = github.checkedAt;
+  }
+  initialize(catalog);
 } catch (error) {
   loading.replaceChildren(document.createTextNode('Не удалось загрузить каталог. '),
     element('a', 'proof', 'Открыть данные каталога'));
