@@ -72,7 +72,7 @@ jobs:
           path: _site
 
   deploy:
-    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    if: "!cancelled() && needs.check.result == 'success' && github.event_name != 'pull_request' && github.ref == 'refs/heads/main'"
     needs: check
     runs-on: ubuntu-latest
     permissions:
