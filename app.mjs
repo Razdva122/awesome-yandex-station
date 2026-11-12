@@ -19,6 +19,7 @@ const icons = {
   route: '<path d="M5 12h5m4 0h5m-9 0 4-6m-4 6 4 6"/><circle cx="4" cy="12" r="1"/><circle cx="15" cy="5" r="1"/><circle cx="20" cy="12" r="1"/><circle cx="15" cy="19" r="1"/>',
   receiver: '<rect x="3" y="14" width="18" height="6" rx="2"/><path d="M7 17h.01M11 17h6M8 10a6 6 0 0 1 8 0M5 7a10 10 0 0 1 14 0"/>',
   trigger: '<path d="M4 10v4m4-7v10m4-14v18m4-14v10m4-7v4"/>',
+  satellite: '<circle cx="12" cy="12" r="2"/><path d="M7.8 7.8a6 6 0 0 0 0 8.4m8.4-8.4a6 6 0 0 1 0 8.4M5 5a10 10 0 0 0 0 14M19 5a10 10 0 0 1 0 14"/>',
   star: '<path d="m12 3 2.7 5.7 6.3.8-4.6 4.5 1.1 6.2-5.5-3-5.5 3 1.1-6.2L3 9.5l6.3-.8L12 3Z"/>',
   external: '<path d="M13 4h7v7M20 4l-9 9m7 0v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6"/>',
   grid: '<rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>',
@@ -254,7 +255,7 @@ function initialize(data) {
 }
 
 try {
-  const response = await fetch('./catalog.json?v=yam-install', { cache: 'no-cache' });
+  const response = await fetch('./catalog.json?v=yandex-quasar', { cache: 'no-cache' });
   if (!response.ok) throw new Error(`HTTP ${response.status}`);
   initialize(await response.json());
 } catch (error) {

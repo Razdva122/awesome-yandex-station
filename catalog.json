@@ -357,6 +357,21 @@
         {"model":"lite2","status":"declared","note":"Автор ожидает, что заработает на совместимой прошивке."},
         {"model":"midi","status":"declared","note":"Автор ожидает, что заработает на совместимой прошивке."}
       ]
+    },
+    {
+      "name": "Yandex Quasar", "icon": "satellite", "accent": "cyan", "category": "voice", "stars": 5,
+      "repo": "https://github.com/darkdarin/yandex-quasar",
+      "description": "Используйте Станцию как голосовой терминал Home Assistant Assist.",
+      "requirements": "Home Assistant с HACS и Quasar Adapter. Для музыки нужен Music Assistant.",
+      "features": [
+        "Голосовые команды с локальным или облачным распознаванием в Home Assistant",
+        "Таймеры с отсчётом на дисплее Станции",
+        "Музыка через Sendspin и голосовые объявления из автоматизаций"
+      ],
+      "compatibility": [
+        {"model":"midi","variant":"Cucumber","status":"tested","firmware":"0.369.1.50"},
+        {"model":"lite2","variant":"Plum","status":"declared","note":"Модель указана в предложении для каталога. Подтверждение проверки в README отсутствует.","source":"https://github.com/Razdva122/awesome-yandex-station/issues/1"}
+      ]
     }
   ]
 }
