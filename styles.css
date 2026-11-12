@@ -146,6 +146,15 @@ dialog::backdrop { background: var(--overlay); }
 .detail-actions .repo-link { min-height: 44px; padding: 8px 12px; border: 1px solid var(--border); border-radius: 8px; color: var(--violet); }
 .detail-actions .repo-link:hover { background: var(--hover); }
 .detail-section-title { margin-top: 20px; font-size: 16px; }
+.yam-install .compatibility-note { margin-top: 4px; }
+.yam-command { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-top: 8px; padding: 8px; border: 1px solid var(--border); border-radius: 8px; background: var(--background); }
+.yam-command pre { flex: 1 1 250px; min-width: 0; margin: 0; padding: 4px; font: 13px/1.5 var(--mono); white-space: pre-wrap; overflow-wrap: anywhere; }
+.yam-copy { min-height: 44px; padding: 8px 12px; border: 1px solid var(--border); border-radius: 8px; background: var(--surface-raised); color: var(--violet); font-size: 13px; font-weight: 650; }
+.yam-copy:hover { background: var(--hover); }
+.yam-install-footer { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; }
+.yam-install-footer .proof { display: inline-flex; align-items: center; gap: 4px; }
+.yam-install-footer svg { width: 13px; height: 13px; }
+.yam-copy-status { color: var(--muted); font-size: 12px; }
 .feature-list { display: grid; gap: 8px; list-style: none; margin: 16px 0 0; padding: 0; color: var(--muted); font-size: 14px; }
 .feature-list li { display: flex; align-items: baseline; gap: 8px; }
 .feature-list svg { width: 13px; height: 13px; flex: none; align-self: flex-start; margin-top: 4px; color: var(--violet); }

@@ -119,6 +119,11 @@
         "width": 1600,
         "height": 900
       },
+      "yamInstall": {
+        "command": "yam install rodyatotu/soundya",
+        "note": "Нужны YAM и Luna. После установки включите пакет в Luna.",
+        "source": "https://github.com/rodyatotu/soundya"
+      },
       "compatibility": [
         {"model":"lite1","status":"declared","note":"README указывает 0.369.1.46 для проверки получения доступа. Версия прошивки для проверки самого плеера не указана."},
         {"model":"mini1","status":"declared"},{"model":"mini2","status":"declared"},{"model":"station2","status":"declared"}
@@ -133,6 +138,11 @@
         "Трансляция из YouTube Music по локальной сети",
         "Управление из браузера или терминала"
       ],
+      "yamInstall": {
+        "command": "yam install --yes ytm-alice-0.7.6-yandexmicro.yampkg",
+        "note": "Пример для Лайт 1. Скачайте пакет для своей модели из релиза. Запуск службы описан в инструкции.",
+        "source": "https://github.com/SPAWNRYS-ban/ytm-alice"
+      },
       "compatibility": [
         {"model":"lite1","status":"tested","note":"На реальной колонке проверена базовая работа предыдущих версий."},
         {"model":"mini2","variant":"с часами","status":"tested","note":"На реальной колонке проверена базовая работа предыдущих версий."},
@@ -149,6 +159,11 @@
         "Веб-панель для управления плагинами",
         "Доступ плагинов к функциям колонки"
       ],
+      "yamInstall": {
+        "command": "/data/yam/bin/yam-run install yam/luna",
+        "note": "Нужен YAM с подключённым официальным реестром.",
+        "source": "https://github.com/nyakokitsu/luna#через-yam"
+      },
       "compatibility": [
         {"model":"mini2","status":"tested","firmware":"0.369.1.46.4793643989.20261020.299","note":"На этой прошивке проверено управление громкостью на устройстве."}
       ]
@@ -194,6 +209,11 @@
         "source": "https://github.com/ryysel/Station-airplay/blob/HEAD/docs/assets/airplay-picker.jpg",
         "width": 590,
         "height": 1280
+      },
+      "yamInstall": {
+        "command": "yam install airplay/airplay-luna",
+        "note": "Нужны Luna, YAM 0.2.5 или новее и официальный реестр v2.",
+        "source": "https://github.com/ryysel/Station-airplay"
       },
       "compatibility": [
         {"model":"station1","status":"declared"},{"model":"station2","status":"declared"},
@@ -306,6 +326,11 @@
         "Работает самостоятельно или внутри Quasar Bridge",
         "Базовое групповое воспроизведение с iPhone"
       ],
+      "yamInstall": {
+        "command": "yam install skrashevich/station-airplay",
+        "note": "Нужен YAM v2 с подключённым официальным реестром.",
+        "source": "https://github.com/skrashevich/station-airplay#через-yam-v2"
+      },
       "compatibility": [
         {"model":"midi","status":"tested","note":"Подтверждены обнаружение с iPhone и воспроизведение."},
         {"model":"station2","status":"tested","note":"Подтверждены обнаружение с iPhone и воспроизведение."}
@@ -319,6 +344,11 @@
         "Запись примеров и обучение на самой Станции",
         "Веб-панель для управления словами активации"
       ],
+      "yamInstall": {
+        "command": "yam --platform yandexmini_2 install tangenx/wakeword",
+        "note": "Пример для Мини 2. Для другой модели выберите её профиль по инструкции.",
+        "source": "https://github.com/tangenx/station-wakeword#через-yam"
+      },
       "compatibility": [
         {"model":"station2","status":"tested"},
         {"model":"mini2","status":"tested"},

@@ -79,6 +79,35 @@ function link(href, label, className, withIcon = false) {
   return node;
 }
 
+function yamInstallSection({ command, note, source }) {
+  const code = element('code', '', command);
+  const copy = element('button', 'yam-copy', 'Копировать');
+  copy.type = 'button';
+  copy.setAttribute('aria-label', 'Копировать команду YAM');
+  const status = element('span', 'yam-copy-status');
+  status.setAttribute('role', 'status');
+  copy.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(command);
+      status.textContent = 'Команда скопирована';
+    } catch {
+      const range = document.createRange();
+      range.selectNodeContents(code);
+      const selection = window.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+      status.textContent = 'Команда выделена. Скопируйте её вручную.';
+    }
+  });
+
+  return element('section', 'yam-install', [
+    element('h3', 'detail-section-title', 'Установка через YAM'),
+    element('p', 'compatibility-note', note),
+    element('div', 'yam-command', [element('pre', '', [code]), copy]),
+    element('div', 'yam-install-footer', [link(source, 'Инструкция проекта', 'proof', true), status])
+  ]);
+}
+
 function showDetails(project, data) {
   const { models, categories } = data;
   const title = element('h2', '', project.name);
@@ -116,6 +145,7 @@ function showDetails(project, data) {
       element('strong', '', 'Что понадобится'), document.createTextNode(project.requirements)
     ]));
   }
+  if (project.yamInstall) detailContent.append(yamInstallSection(project.yamInstall));
   detailContent.append(
     element('div', 'detail-actions', [github]),
     element('details', 'compatibility-disclosure', [
