@@ -77,6 +77,22 @@
       "stars": 17,
       "release": null
     },
+    "https://github.com/rison1337/Alisa-ChatGPT-voice-assistant": {
+      "stars": 35,
+      "release": {
+        "version": "v0.3.10",
+        "publishedAt": "2026-11-10T22:21:49Z",
+        "url": "https://github.com/rison1337/Alisa-ChatGPT-voice-assistant/releases/tag/v0.3.10"
+      }
+    },
+    "https://github.com/celebeing/yastationd": {
+      "stars": 6,
+      "release": {
+        "version": "v0.29.1",
+        "publishedAt": "2026-11-11T00:33:38Z",
+        "url": "https://github.com/celebeing/yastationd/releases/tag/v0.29.1"
+      }
+    },
     "https://github.com/chrometechhype/alice-control-center": {
       "stars": 13,
       "release": {

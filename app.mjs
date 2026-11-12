@@ -10,6 +10,8 @@ const icons = {
   play: '<rect x="3" y="5" width="18" height="14" rx="4"/><path d="m10 9 5 3-5 3V9Z"/>',
   moon: '<path d="M20 15a8 8 0 0 1-11-11 8.5 8.5 0 1 0 11 11ZM17 4v5m-2.5-2.5h5"/>',
   mic: '<rect x="9" y="3" width="6" height="12" rx="3"/><path d="M5 11v1a7 7 0 0 0 14 0v-1M12 19v3m-3 0h6"/>',
+  'voice-chat': '<path d="M20 11.5a7.5 7.5 0 0 1-7.5 7.5H5l1.5-3A7.5 7.5 0 1 1 20 11.5ZM9 10v3m3-5v7m3-5v3"/>',
+  'firmware-chip': '<rect x="5" y="5" width="14" height="14" rx="3"/><path d="M9 2v3m6-3v3M9 19v3m6-3v3M2 9h3m-3 6h3m14-6h3m-3 6h3m-12 0 2-6 2 6"/>',
   sliders: '<path d="M4 5h16M4 12h16M4 19h16"/><circle cx="9" cy="5" r="2" class="slider-dot"/><circle cx="15" cy="12" r="2" class="slider-dot"/><circle cx="8" cy="19" r="2" class="slider-dot"/>',
   airplay: '<path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1m-7-4 6 8H6l6-8Z"/>',
   tv: '<rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4m-2-13 5 2.5-5 2.5Z"/>',

@@ -216,6 +216,41 @@
       ]
     },
     {
+      "name": "Alisa Voice", "icon": "voice-chat", "accent": "lilac", "category": "voice", "stars": 35,
+      "repo": "https://github.com/rison1337/Alisa-ChatGPT-voice-assistant",
+      "description": "Общайтесь с ChatGPT голосом. В нативном режиме клиент работает прямо на Станции.",
+      "requirements": "Аккаунт ChatGPT, root и SSH на Станции. Для браузерного моста нужен постоянно включённый компьютер с Linux.",
+      "features": [
+        "Голосовые команды для открытия, смены и закрытия чатов",
+        "Возврат к штатной Алисе после закрытия чата",
+        "Настройка подсветки и индикации на совместимых моделях"
+      ],
+      "compatibility": [
+        {"model":"lite2","variant":"Prune, без часов","status":"tested","note":"Сопровождающий проверил нативный режим и Linux-мост с ChatGPT Free и Plus, обновление и автозапуск после перезагрузки.","source":"https://github.com/rison1337/Alisa-ChatGPT-voice-assistant/blob/main/docs/validation.md"},
+        {"model":"lite1","status":"tested","firmware":"0.369.1.46.4778262442.20261013.297","note":"Автор адаптации проверил нативный голосовой режим на одной колонке.","source":"https://github.com/rison1337/Alisa-ChatGPT-voice-assistant/blob/main/docs/lite1.md"},
+        {"model":"mini2","status":"tested","firmware":"0.369.1.46.4793643989.20261020.299","note":"Автор адаптации проверил нативный режим, Linux-мост, возврат к Алисе и кольцо.","source":"https://github.com/rison1337/Alisa-ChatGPT-voice-assistant/blob/main/docs/mini2.md"},
+        {"model":"mini3","status":"tested","firmware":"0.372.1.21.4824610289.20261102.120","note":"Автор адаптации проверил установку из Windows, диалог, дисплей, подсветку и автозапуск.","source":"https://github.com/rison1337/Alisa-ChatGPT-voice-assistant/blob/main/docs/mini3.md"},
+        {"model":"station2","status":"tested","firmware":"0.369.1.46.4778263334.20261013.295","note":"Автор адаптации проверил голосовой диалог, команды и автозапуск.","source":"https://github.com/rison1337/Alisa-ChatGPT-voice-assistant/pull/3"},
+        {"model":"midi","status":"experimental","firmware":"0.369.1.46.4778262955.20261013.160","note":"Участник проекта проверил голос, подсветку, часы и автозапуск на одной колонке.","source":"https://github.com/rison1337/Alisa-ChatGPT-voice-assistant/blob/main/docs/station-midi.md"}
+      ]
+    },
+    {
+      "name": "yastationd", "icon": "firmware-chip", "accent": "cyan", "category": "voice", "stars": 6,
+      "repo": "https://github.com/celebeing/yastationd",
+      "description": "Альтернативная прошивка. Заменяет штатную Алису голосовым агентом Home Assistant.",
+      "requirements": "Home Assistant и SSH-доступ к Станции. Для музыки нужен Music Assistant.",
+      "features": [
+        "Локальное голосовое управление через Home Assistant Assist",
+        "Музыка из Music Assistant",
+        "Управление дисплеем, подсветкой и кнопками Станции"
+      ],
+      "compatibility": [
+        {"model":"mini3","status":"tested","note":"По данным проекта, две колонки используются ежедневно.","source":"https://github.com/celebeing/yastationd/blob/main/docs/boards/README.md"},
+        {"model":"mini3pro","status":"tested","note":"Авторы подтверждают проверку на физической колонке.","source":"https://github.com/celebeing/yastationd/blob/main/docs/boards/README.md"},
+        {"model":"station3","status":"tested","note":"На колонке проверены голос, воспроизведение, громкость, кнопки, подсветка и дисплей. Домофон ещё не проверен.","source":"https://github.com/celebeing/yastationd/blob/main/docs/boards/orion.md"}
+      ]
+    },
+    {
       "name": "Alice Control Center", "icon": "sliders", "accent": "cyan", "category": "control", "stars": 13,
       "repo": "https://github.com/chrometechhype/alice-control-center",
       "description": "Настраивайте подсветку и звуки Станции из браузера.",
