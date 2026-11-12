@@ -179,7 +179,7 @@
       ]
     },
     {
-      "name": "Station AirPlay", "icon": "airplay", "accent": "lilac", "category": "music", "stars": 6,
+      "name": "Station AirPlay для Luna", "icon": "airplay", "accent": "lilac", "category": "music", "stars": 6,
       "repo": "https://github.com/ryysel/Station-airplay",
       "description": "Передавайте звук с iPhone, iPad или Mac на Станцию.",
       "requirements": "Luna. Поддержка кнопок и дисплея зависит от модели.",
@@ -279,6 +279,53 @@
       ],
       "compatibility": [
         {"model":"lite1","status":"tested","firmware":"0.369.1.46.4778262442.20261013.297","note":"Проект экспериментальный. Автор проверил эту модель и прошивку."}
+      ]
+    },
+    {
+      "name": "Quasar Bridge", "icon": "route", "accent": "cyan", "category": "voice", "stars": 67,
+      "repo": "https://github.com/skrashevich/quasar-bridge",
+      "description": "Подключите свою нейросеть и Home Assistant к голосовым командам Алисы.",
+      "requirements": "Нужен интернет. Распознавание речи и озвучивание работают через облако Яндекса.",
+      "features": [
+        "Своя нейросеть отвечает на выбранные вопросы",
+        "Home Assistant обрабатывает команды умного дома",
+        "Музыка, погода и таймеры остаются доступны через Алису"
+      ],
+      "compatibility": [
+        {"model":"station2","status":"tested","note":"На физической колонке проверены голосовые ответы нейросети и команды Home Assistant.","source":"https://github.com/skrashevich/quasar-bridge/blob/main/docs/validation.md"},
+        {"model":"midi","status":"tested","note":"Автор проверил установку, обновление и автозапуск."},
+        {"model":"lite1","status":"tested","note":"В README подтверждена работа на Станции Лайт."}
+      ]
+    },
+    {
+      "name": "station-airplay (Go)", "icon": "receiver", "accent": "lilac", "category": "music", "stars": 4,
+      "repo": "https://github.com/skrashevich/station-airplay",
+      "description": "Принимайте звук с устройств Apple через отдельный приёмник AirPlay 2.",
+      "requirements": "Станция на Linux с glibc и ALSA.",
+      "features": [
+        "Работает самостоятельно или внутри Quasar Bridge",
+        "Базовое групповое воспроизведение с iPhone"
+      ],
+      "compatibility": [
+        {"model":"midi","status":"tested","note":"Подтверждены обнаружение с iPhone и воспроизведение."},
+        {"model":"station2","status":"tested","note":"Подтверждены обнаружение с iPhone и воспроизведение."}
+      ]
+    },
+    {
+      "name": "station-wakeword", "icon": "trigger", "accent": "green", "category": "voice", "stars": 34,
+      "repo": "https://github.com/tangenx/station-wakeword",
+      "description": "Научите Станцию откликаться на своё слово, например «Джарвис».",
+      "features": [
+        "Запись примеров и обучение на самой Станции",
+        "Веб-панель для управления словами активации"
+      ],
+      "compatibility": [
+        {"model":"station2","status":"tested"},
+        {"model":"mini2","status":"tested"},
+        {"model":"mini3","status":"tested"},
+        {"model":"lite1","status":"declared","note":"Автор ожидает, что заработает на совместимой прошивке."},
+        {"model":"lite2","status":"declared","note":"Автор ожидает, что заработает на совместимой прошивке."},
+        {"model":"midi","status":"declared","note":"Автор ожидает, что заработает на совместимой прошивке."}
       ]
     }
   ]
