@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-13T12:21:03.459Z",
+  "checkedAt": "2026-11-14T11:36:19.192Z",
   "repositories": {
     "https://github.com/nyakokitsu/yam": {
       "stars": 175,
@@ -10,7 +10,7 @@
       }
     },
     "https://github.com/Morvex885/pulsar": {
-      "stars": 111,
+      "stars": 114,
       "release": {
         "version": "v0.6.1",
         "publishedAt": "2026-11-10T23:29:13Z",
@@ -36,9 +36,9 @@
     "https://github.com/Horohi/soloist-station-lite": {
       "stars": 22,
       "release": {
-        "version": "v1.3.12",
-        "publishedAt": "2026-11-12T17:19:48Z",
-        "url": "https://github.com/Horohi/soloist-station-lite/releases/tag/v1.3.12"
+        "version": "v1.3.13",
+        "publishedAt": "2026-11-13T18:44:52Z",
+        "url": "https://github.com/Horohi/soloist-station-lite/releases/tag/v1.3.13"
       }
     },
     "https://github.com/awtainq/Alice-apple-music": {
@@ -86,7 +86,7 @@
       }
     },
     "https://github.com/celebeing/yastationd": {
-      "stars": 6,
+      "stars": 7,
       "release": {
         "version": "v0.29.1",
         "publishedAt": "2026-11-11T00:33:38Z",
@@ -110,7 +110,7 @@
       }
     },
     "https://github.com/qwikly3/NabuStation": {
-      "stars": 3,
+      "stars": 4,
       "release": {
         "version": "v1.0.0",
         "publishedAt": "2026-11-11T05:59:43Z",
@@ -134,7 +134,7 @@
       "release": null
     },
     "https://github.com/skrashevich/quasar-bridge": {
-      "stars": 70,
+      "stars": 72,
       "release": {
         "version": "v0.7.6",
         "publishedAt": "2026-11-08T07:04:04Z",
@@ -142,7 +142,7 @@
       }
     },
     "https://github.com/skrashevich/station-airplay": {
-      "stars": 4,
+      "stars": 5,
       "release": {
         "version": "v0.2.3",
         "publishedAt": "2026-11-06T13:32:35Z",
@@ -150,7 +150,7 @@
       }
     },
     "https://github.com/tangenx/station-wakeword": {
-      "stars": 35,
+      "stars": 37,
       "release": {
         "version": "v0.4.0",
         "publishedAt": "2026-11-08T15:44:21Z",
@@ -160,9 +160,9 @@
     "https://github.com/darkdarin/yandex-quasar": {
       "stars": 7,
       "release": {
-        "version": "v0.2.21",
-        "publishedAt": "2026-11-12T18:04:13Z",
-        "url": "https://github.com/darkdarin/yandex-quasar/releases/tag/v0.2.21"
+        "version": "v0.2.24",
+        "publishedAt": "2026-11-13T17:18:28Z",
+        "url": "https://github.com/darkdarin/yandex-quasar/releases/tag/v0.2.24"
       }
     }
   }
