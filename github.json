@@ -1,8 +1,8 @@
 {
-  "checkedAt": "2026-11-14T11:36:19.192Z",
+  "checkedAt": "2026-11-15T12:00:43.903Z",
   "repositories": {
     "https://github.com/nyakokitsu/yam": {
-      "stars": 175,
+      "stars": 176,
       "release": {
         "version": "yam-v0.2.5",
         "publishedAt": "2026-10-31T17:57:19Z",
@@ -10,7 +10,7 @@
       }
     },
     "https://github.com/Morvex885/pulsar": {
-      "stars": 114,
+      "stars": 117,
       "release": {
         "version": "v0.6.1",
         "publishedAt": "2026-11-10T23:29:13Z",
@@ -18,7 +18,7 @@
       }
     },
     "https://github.com/dimap/yapanel-web": {
-      "stars": 91,
+      "stars": 92,
       "release": {
         "version": "v0.3.1",
         "publishedAt": "2026-11-08T23:07:41Z",
@@ -34,7 +34,7 @@
       }
     },
     "https://github.com/Horohi/soloist-station-lite": {
-      "stars": 22,
+      "stars": 23,
       "release": {
         "version": "v1.3.13",
         "publishedAt": "2026-11-13T18:44:52Z",
@@ -42,7 +42,7 @@
       }
     },
     "https://github.com/awtainq/Alice-apple-music": {
-      "stars": 0,
+      "stars": 1,
       "release": {
         "version": "v0.3.8",
         "publishedAt": "2026-11-02T21:30:31Z",
@@ -52,13 +52,13 @@
     "https://github.com/rodyatotu/soundya": {
       "stars": 29,
       "release": {
-        "version": "v0.5.9",
-        "publishedAt": "2026-11-10T20:03:39Z",
-        "url": "https://github.com/rodyatotu/soundya/releases/tag/v0.5.9"
+        "version": "v0.5.10",
+        "publishedAt": "2026-11-15T11:15:00Z",
+        "url": "https://github.com/rodyatotu/soundya/releases/tag/v0.5.10"
       }
     },
     "https://github.com/SPAWNRYS-ban/ytm-alice": {
-      "stars": 28,
+      "stars": 30,
       "release": {
         "version": "v0.7.6",
         "publishedAt": "2026-11-11T20:46:10Z",
@@ -68,9 +68,9 @@
     "https://github.com/nyakokitsu/luna": {
       "stars": 23,
       "release": {
-        "version": "v0.2.26",
-        "publishedAt": "2026-11-12T14:12:48Z",
-        "url": "https://github.com/nyakokitsu/luna/releases/tag/v0.2.26"
+        "version": "v0.2.28",
+        "publishedAt": "2026-11-15T09:17:07Z",
+        "url": "https://github.com/nyakokitsu/luna/releases/tag/v0.2.28"
       }
     },
     "https://github.com/hu553in/yandex-station-chatgpt-voice": {
@@ -88,9 +88,9 @@
     "https://github.com/celebeing/yastationd": {
       "stars": 7,
       "release": {
-        "version": "v0.29.1",
-        "publishedAt": "2026-11-11T00:33:38Z",
-        "url": "https://github.com/celebeing/yastationd/releases/tag/v0.29.1"
+        "version": "v0.30.0",
+        "publishedAt": "2026-11-14T18:47:38Z",
+        "url": "https://github.com/celebeing/yastationd/releases/tag/v0.30.0"
       }
     },
     "https://github.com/chrometechhype/alice-control-center": {
@@ -104,9 +104,9 @@
     "https://github.com/ryysel/Station-airplay": {
       "stars": 6,
       "release": {
-        "version": "v2.1.6",
-        "publishedAt": "2026-11-13T06:32:57Z",
-        "url": "https://github.com/ryysel/Station-airplay/releases/tag/v2.1.6"
+        "version": "v2.1.8",
+        "publishedAt": "2026-11-15T11:14:17Z",
+        "url": "https://github.com/ryysel/Station-airplay/releases/tag/v2.1.8"
       }
     },
     "https://github.com/qwikly3/NabuStation": {
@@ -134,7 +134,7 @@
       "release": null
     },
     "https://github.com/skrashevich/quasar-bridge": {
-      "stars": 72,
+      "stars": 76,
       "release": {
         "version": "v0.7.6",
         "publishedAt": "2026-11-08T07:04:04Z",
@@ -150,7 +150,7 @@
       }
     },
     "https://github.com/tangenx/station-wakeword": {
-      "stars": 37,
+      "stars": 38,
       "release": {
         "version": "v0.4.0",
         "publishedAt": "2026-11-08T15:44:21Z",
@@ -158,7 +158,7 @@
       }
     },
     "https://github.com/darkdarin/yandex-quasar": {
-      "stars": 7,
+      "stars": 8,
       "release": {
         "version": "v0.2.24",
         "publishedAt": "2026-11-13T17:18:28Z",
