@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-24T14:58:03.774Z",
+  "checkedAt": "2026-11-25T14:33:18.042Z",
   "repositories": {
     "https://github.com/nyakokitsu/yam": {
       "stars": 182,
@@ -26,7 +26,7 @@
       }
     },
     "https://github.com/klockky/spotiya": {
-      "stars": 62,
+      "stars": 63,
       "release": {
         "version": "v0.10.1",
         "publishedAt": "2026-11-06T20:37:07Z",
@@ -36,9 +36,9 @@
     "https://github.com/Horohi/soloist-station-lite": {
       "stars": 29,
       "release": {
-        "version": "v1.3.16",
-        "publishedAt": "2026-11-23T12:36:38Z",
-        "url": "https://github.com/Horohi/soloist-station-lite/releases/tag/v1.3.16"
+        "version": "v1.3.18",
+        "publishedAt": "2026-11-24T18:50:59Z",
+        "url": "https://github.com/Horohi/soloist-station-lite/releases/tag/v1.3.18"
       }
     },
     "https://github.com/awtainq/Alice-apple-music": {
@@ -50,7 +50,7 @@
       }
     },
     "https://github.com/rodyatotu/soundya": {
-      "stars": 33,
+      "stars": 34,
       "release": {
         "version": "v0.6.3",
         "publishedAt": "2026-11-20T02:19:52Z",
@@ -60,9 +60,9 @@
     "https://github.com/SPAWNRYS-ban/ytm-alice": {
       "stars": 36,
       "release": {
-        "version": "v0.7.6",
-        "publishedAt": "2026-11-11T20:46:10Z",
-        "url": "https://github.com/SPAWNRYS-ban/ytm-alice/releases/tag/v0.7.6"
+        "version": "v0.7.7",
+        "publishedAt": "2026-11-24T15:27:57Z",
+        "url": "https://github.com/SPAWNRYS-ban/ytm-alice/releases/tag/v0.7.7"
       }
     },
     "https://github.com/nyakokitsu/luna": {
@@ -134,7 +134,7 @@
       "release": null
     },
     "https://github.com/skrashevich/quasar-bridge": {
-      "stars": 94,
+      "stars": 96,
       "release": {
         "version": "v0.8.2",
         "publishedAt": "2026-11-22T11:20:42Z",
@@ -160,9 +160,9 @@
     "https://github.com/darkdarin/yandex-quasar": {
       "stars": 13,
       "release": {
-        "version": "v0.2.25",
-        "publishedAt": "2026-11-16T11:39:14Z",
-        "url": "https://github.com/darkdarin/yandex-quasar/releases/tag/v0.2.25"
+        "version": "v0.2.26",
+        "publishedAt": "2026-11-24T19:05:04Z",
+        "url": "https://github.com/darkdarin/yandex-quasar/releases/tag/v0.2.26"
       }
     }
   }
