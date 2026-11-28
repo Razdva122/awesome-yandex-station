@@ -1,8 +1,8 @@
 {
-  "checkedAt": "2026-11-27T13:58:24.265Z",
+  "checkedAt": "2026-11-28T13:13:12.150Z",
   "repositories": {
     "https://github.com/nyakokitsu/yam": {
-      "stars": 182,
+      "stars": 183,
       "release": {
         "version": "yam-v0.2.5",
         "publishedAt": "2026-10-31T17:57:19Z",
@@ -78,7 +78,7 @@
       "release": null
     },
     "https://github.com/rison1337/Alisa-ChatGPT-voice-assistant": {
-      "stars": 75,
+      "stars": 77,
       "release": {
         "version": "v0.3.11",
         "publishedAt": "2026-11-20T09:11:35Z",
@@ -134,7 +134,7 @@
       "release": null
     },
     "https://github.com/skrashevich/quasar-bridge": {
-      "stars": 98,
+      "stars": 99,
       "release": {
         "version": "v0.8.2",
         "publishedAt": "2026-11-22T11:20:42Z",
@@ -150,7 +150,7 @@
       }
     },
     "https://github.com/tangenx/station-wakeword": {
-      "stars": 40,
+      "stars": 41,
       "release": {
         "version": "v0.4.1",
         "publishedAt": "2026-11-16T00:34:42Z",
